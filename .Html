@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contoh Halaman HTML — Modern & Responsif</title>
+  <meta name="description" content="Template HTML responsif sederhana dengan header, hero, fitur, galeri, dan form kontak."/>
+  <link rel="icon" href="data:," />
+
+  <!-- Styles: sederhana, modern, aksesibel -->
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 12px;
+      --max-width: 1100px;
+      --gap: 1.25rem;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #071024 0%, #071728 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:2rem;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:var(--gap);
+    }
+
+    /* Header / Nav */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:44px;
+      height:44px;
+      background:linear-gradient(135deg,var(--accent),#7c3aed);
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      font-weight:700;
+      color:#032026;
+      box-shadow: 0 4px 18px rgba(6,182,212,0.12);
+    }
+    nav{
+      display:flex;
+      gap:1rem;
+      align-items:center;
+    }
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:0.5rem 0.6rem;
+      border-radius:8px;
+      font-weight:600;
+    }
+    nav a:hover{ color: #fff; background:var(--glass); }
+
+    .cta{
+      background:linear-gradient(90deg,var(--accent),#7c3aed);
+      color:#022;
+      padding:0.5rem 0.9rem;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    /* Responsive nav toggle (small screens) */
+    .menu-btn{
+      display:none;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      padding:0.4rem;
+      border-radius:8px;
+      color:var(--muted);
+    }
+
+    /* Hero */
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:2rem;
+      border-radius:var(--radius);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:1.5rem;
+      align-items:center;
+      box-shadow: 0 8px 40px rgba(2,6,23,0.6);
+    }
+    .hero h1{
+      margin:0 0 0.5rem 0;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      line-height:1.05;
+    }
+    .hero p{ color:var(--muted); margin:0 0 1rem 0; max-width:48ch; }
